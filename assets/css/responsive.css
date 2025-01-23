@@ -1,0 +1,53 @@
+@media screen and (max-width: 1400px) {
+  .header .header_bottom .my_navbar ul li {
+    padding: 1.5rem 0.89rem;
+  }
+  .header .header_bottom .my_navbar ul li a {
+    font-size: 1.4rem;
+  }
+
+  .header .header_top .login_buttons a,
+  .header .header_top .contact_info a {
+    padding: 0.3rem 1rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header .header_bottom {
+    /* position: relative; */
+  }
+  .header .header_bottom .my_navbar ul {
+    position: absolute;
+    background-color: var(--primary-bg-color);
+    top: 6.5rem;
+    height: calc(100vh - 6.5rem);
+    padding: 2.4rem;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    right: -100%;
+    transition: 0.4s;
+    box-shadow: 0px 0px 10px 0px rgba(3, 186, 24, 0.5);
+  }
+  .header .header_bottom .toggle_btn .icon {
+    transition: 0.4s;
+  }
+  .header .header_bottom .my_navbar ul.active {
+    right: 0;
+    width: 50%;
+    opacity: 1;
+    visibility: visible;
+  }
+  .header .header_bottom .my_navbar ul li {
+    padding: 0.6rem 0.89rem;
+    border-bottom: 1px solid var(--white-border);
+  }
+  .header .header_bottom .my_navbar ul li:last-child {
+    border-bottom: 0;
+  }
+
+  .header .header_bottom .toggle_btn {
+    color: var(--white-text);
+  }
+}

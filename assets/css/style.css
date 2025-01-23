@@ -1,0 +1,151 @@
+/*======================
+    Google Fonts
+========================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*======================
+    CSS Veriables 
+========================*/
+
+:root {
+  --primary-text-color: #e7e2cc;
+  --secondary-text-color: #02ae02;
+
+  --primary-bg-color: #02ae02;
+  --secondary-bg-color: #e7e2cc;
+  --secondary-bg-color-2: #2d0af1;
+
+  --white-text: #fff;
+  --white-bg: #fff;
+  --black-text: #000;
+  --black-bg: #000;
+
+  --white-border: #fff;
+  --black-border: #000;
+  --primary-border: #e7e2cc;
+  --secondary-border: #02ae02;
+
+  /* --primary-bg-color: #01f702; */
+  /* --primary-text-color: #007c7f; */
+  /* --primary-bg: #007c7f; */
+  /* --primary-color-2: #0000f6;
+
+  --primary-color-3: #01f702;
+  --secondary-color: #e7e2cc;
+  --secondary-color-2: #be9f80;
+
+  --primary-color: #a98be5;
+  --secondary-color: #cccccc; */
+}
+
+/* =====================
+      COMMON CSS
+======================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif !important;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*======================
+    Header CSS
+========================*/
+.header .header_top {
+  background-color: var(--secondary-bg-color-2);
+  color: var(--white-text);
+}
+
+.header .header_top .login_buttons a,
+.header .header_top .contact_info a {
+  color: var(--white-text);
+  border: 1px solid var(--white-border);
+  padding: 0.3rem 1.3rem;
+  border-radius: 1.1rem;
+  transition: 0.4s;
+}
+
+.header .header_top .login_buttons a:hover,
+.header .header_top .contact_info a:hover {
+  background-color: var(--white-bg);
+  color: var(--secondary-text-color);
+}
+
+.header .header_middle .logo img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.header .header_bottom {
+  background-color: var(--secondary-bg-color-2);
+}
+.header .header_bottom .my_navbar ul li {
+  padding: 1.5rem 0.9rem;
+}
+
+.header .header_bottom .my_navbar ul li a {
+  display: block;
+  color: var(--white-text);
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+.header .header_bottom .my_navbar ul li a:hover {
+  color: var(--black-text);
+}
+
+.header .header_bottom .logo img {
+  width: 4rem;
+  height: 4rem;
+}
+.header .header_bottom.active {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  animation: fadeInDown;
+  animation-duration: 0.4s;
+  animation-name: sticky_header;
+  z-index: 999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes sticky_header {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
