@@ -34,4 +34,57 @@ document.addEventListener("DOMContentLoaded", () => {
       header_bottom.classList.remove("active");
     }
   });
+
+
+
+  // live chat
+
+let chat_icon=document.querySelector(".chat_icon");
+let chat_box=document.querySelector(".chat_box");
+chat_icon.addEventListener("click",()=>{chat_box.classList.toggle("active");
+
+
 });
+
+
+
+let close_btn=document.querySelector(".close_btn");
+close_btn.addEventListener("click", ()=> {
+chat_box.classList.remove("active");
+
+});
+
+let send_btn = document.querySelector("#send_button");
+
+send_btn.addEventListener("click", () => {
+  let message_input = document.querySelector("#message_input");
+  let message = message_input.value; // Correctly accessing the input value
+  
+  if (message === "") {
+    return; // Prevent adding empty messages
+  }
+
+  let message_body = `
+    <div class="sender d-flex mb-3 justify-content-left gap-2">
+      <div class="author_img">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="message">
+        <p>${message}</p> <!-- Correct template literal syntax -->
+      </div>
+    </div>`;
+
+  let messages_wrapper = document.querySelector(".messages");
+  messages_wrapper.innerHTML += message_body;
+  message_input.value = ""; // Correctly resetting input field value
+});
+
+});
+
+
+
+
+/****************************************************/
+
+
+

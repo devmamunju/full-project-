@@ -149,3 +149,84 @@ img {
     top: 0;
   }
 }
+
+
+
+
+/*************************/
+
+.chat_icon{
+
+  position: fixed;
+  bottom: 10px;
+  right: 50px;
+  font-size: 60px;
+  
+  
+}
+
+.fa-whatsapp{
+color: #02ae02;
+
+
+
+}
+
+.chat_box{
+
+  height: 400px;
+  width: 350px;
+  background: white;
+  position: fixed;
+  bottom: 170px;
+  right: 60px;
+  display: none;
+
+}
+
+.chat_box.active{
+  display: block;
+}
+
+.messege{
+
+  height: 350px;
+  width: 100%;
+  background: rgb(239, 235, 235);
+}
+
+
+.card-footer{
+
+  border: none !important;
+}
+
+.card-header{
+
+  border: none !important;
+
+  
+}
+
+.author_img{
+
+  background-color: #02ae02;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.messege p{
+
+color: white;
+background-color: #02ae02;
+padding: 10px;
+border-radius: 20px;
+
+
+
+}
