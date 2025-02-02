@@ -54,9 +54,10 @@ chat_box.classList.remove("active");
 
 });
 
-let send_btn = document.querySelector("#send_button");
+let send_btn = document.querySelector("#send_buton");
 
 send_btn.addEventListener("click", () => {
+
   let message_input = document.querySelector("#message_input");
   let message = message_input.value; // Correctly accessing the input value
   
